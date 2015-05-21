@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="SwipeImageAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zvp-d4-Zah" userLabel="Next">
+                                <rect key="frame" x="145" y="204" width="310" height="192"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="192" id="9YW-bC-Q2l"/>
+                                    <constraint firstAttribute="width" constant="310" id="Fu9-kU-1jR"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="phM-cZ-7Op" userLabel="MovableViewWithImage">
+                                <rect key="frame" x="145" y="204" width="310" height="192"/>
+                                <subviews>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="TIh-l1-8Ki" userLabel="Current">
+                                        <rect key="frame" x="0.0" y="0.0" width="310" height="192"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="310" id="0uJ-8D-8Iu"/>
+                                            <constraint firstAttribute="height" constant="192" id="FDV-P1-Dar"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="8Qn-bS-xvF" appends="YES" id="E4l-3y-JUP"/>
+                                            <outletCollection property="gestureRecognizers" destination="FTD-yQ-pUB" appends="YES" id="krc-5y-ZSA"/>
+                                        </connections>
+                                    </imageView>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-stokeb" translatesAutoresizingMaskIntoConstraints="NO" id="DbE-hh-gbE">
+                                        <rect key="frame" x="242" y="8" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="NqV-0A-N2m"/>
+                                            <constraint firstAttribute="height" constant="60" id="R61-Vd-hKJ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-stokeb" translatesAutoresizingMaskIntoConstraints="NO" id="p3q-WO-T49">
+                                        <rect key="frame" x="8" y="8" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="eOb-sR-zsv"/>
+                                            <constraint firstAttribute="width" constant="60" id="rS8-Bf-gb1"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="DbE-hh-gbE" firstAttribute="top" secondItem="phM-cZ-7Op" secondAttribute="top" constant="8" id="Kl8-2S-NXE"/>
+                                    <constraint firstItem="TIh-l1-8Ki" firstAttribute="top" secondItem="phM-cZ-7Op" secondAttribute="top" id="SQj-Iu-MEO"/>
+                                    <constraint firstItem="p3q-WO-T49" firstAttribute="leading" secondItem="phM-cZ-7Op" secondAttribute="leading" constant="8" id="dem-dV-XwG"/>
+                                    <constraint firstAttribute="trailing" secondItem="DbE-hh-gbE" secondAttribute="trailing" constant="8" id="fb1-kW-55V"/>
+                                    <constraint firstAttribute="centerX" secondItem="TIh-l1-8Ki" secondAttribute="centerX" id="t1H-8X-D0Z"/>
+                                    <constraint firstItem="TIh-l1-8Ki" firstAttribute="leading" secondItem="phM-cZ-7Op" secondAttribute="leading" id="tXo-P4-lf7"/>
+                                    <constraint firstAttribute="centerY" secondItem="TIh-l1-8Ki" secondAttribute="centerY" id="tgP-KY-myB"/>
+                                    <constraint firstItem="p3q-WO-T49" firstAttribute="top" secondItem="phM-cZ-7Op" secondAttribute="top" constant="8" id="z8j-Mj-Zol"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="zvp-d4-Zah" secondAttribute="centerX" id="5AL-aB-Mao"/>
+                            <constraint firstAttribute="centerY" secondItem="zvp-d4-Zah" secondAttribute="centerY" id="CA8-TQ-e8W"/>
+                            <constraint firstAttribute="centerY" secondItem="phM-cZ-7Op" secondAttribute="centerY" id="aeG-4E-cDZ"/>
+                            <constraint firstAttribute="centerX" secondItem="phM-cZ-7Op" secondAttribute="centerX" id="c5H-zx-DO6" userLabel="MovableConstraint"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="currentImageView" destination="TIh-l1-8Ki" id="u1Q-SF-ugd"/>
+                        <outlet property="ignoreImageView" destination="DbE-hh-gbE" id="SRv-S2-zPp"/>
+                        <outlet property="likeImageView" destination="p3q-WO-T49" id="1gj-uh-rXi"/>
+                        <outlet property="movableConstraint" destination="c5H-zx-DO6" id="6XZ-DN-hdw"/>
+                        <outlet property="movableViewWithImage" destination="phM-cZ-7Op" id="9gl-hO-6QK"/>
+                        <outlet property="nextImageView" destination="zvp-d4-Zah" id="bxR-a0-urt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="8Qn-bS-xvF" userLabel="Swipe Left Ignore">
+                    <connections>
+                        <action selector="swipeImageViewLeft:" destination="vXZ-lx-hvc" id="Mvl-g8-LjH"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="FTD-yQ-pUB" userLabel="Swipe Right Like">
+                    <connections>
+                        <action selector="swipeImageViewRight:" destination="vXZ-lx-hvc" id="t1L-dR-sXO"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="313" y="437"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1" width="153" height="153"/>
+        <image name="icon-stokeb" width="35" height="35"/>
+    </resources>
+</document>
